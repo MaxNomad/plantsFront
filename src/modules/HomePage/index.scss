@@ -1,0 +1,119 @@
+@import "../../index.scss";
+
+.item-1 {
+  background-image: url("../../assets/images/plodovi.png");
+}
+
+.item-2 {
+  background-image: url("../../assets/images/decorativni.png");
+}
+
+.item-3 {
+  background-image: url("../../assets/images/yagidni.png");
+}
+
+.item-4 {
+  background-image: url("../../assets/images/exotic.png");
+}
+
+.item-5 {
+  background-image: url("../../assets/images/potato.png");
+}
+
+.item-6 {
+  background-image: url("../../assets/images/cherry.png");
+}
+
+.home {
+  &-categories {
+    display: flex;
+    flex-wrap: wrap;
+    @include breakpoint(mobile_landscape) {
+      margin-top: getRem(100);
+      justify-content: center;
+      flex-wrap: nowrap;
+    }
+    &-item {
+      cursor: pointer;
+      background-repeat: round;
+      border-radius: getRem(16);
+      margin-top: getRem(20);
+      margin-left: getRem(20);
+      width: getRem(161);
+      height: getRem(161);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span {
+        color: white;
+        font-size: getRem(20);
+        font-weight: 500;
+      }
+      @include breakpoint(mobile_landscape) {
+        width: unset;
+        height: unset;
+        background-image: unset;
+        margin-top: 0;
+        margin-left: 0;
+        border-radius: 0;
+        span {
+          font-size: getRem(18);
+          line-height: getRem(18);
+          padding: getRem(20) getRem(13);
+          color: black;
+        }
+        &:hover {
+          background: rgba(7, 137, 67, 1);
+          span {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  &-fertilizers {
+    width: getRem(335);
+    height: getRem(162);
+    border-radius: getRem(16);
+    margin: getRem(20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../assets/images/fertilizers.png");
+    color: white;
+    font-size: getRem(20);
+    font-weight: 500;
+    background-repeat: round;
+  }
+  &-popular {
+    font-weight: 500;
+    font-size: getRem(20);
+    margin-left: getRem(20);
+    margin-bottom: getRem(20);
+  }
+  &-popular-goods {
+    &-items {
+      display: flex;
+    }
+    &-more {
+      margin-top: getRem(20);
+      margin-left: getRem(130);
+    }
+  }
+  &-newsorts {
+    background-image: url("../../assets/images/newgoods.png");
+    background-repeat: round;
+    width: getRem(335);
+    height: getRem(102);
+    margin: getRem(20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: getRem(20);
+    font-weight: 700;
+    @include breakpoint(mobile_landscape) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,137 @@
+@import '../../index.scss';
+
+.cart {
+  &-sum {
+    font-size: getRem(18);
+    margin-left: getRem(20);
+    margin-top: getRem(20);
+  }
+  h5 {
+    font-size: getRem(20);
+    margin-left: getRem(20);
+    margin-top: getRem(20);
+  }
+  &-current {
+    font-weight: 500;
+    font-size: getRem(20);
+    margin: getRem(20);
+    @include breakpoint(mobile_landscape) {
+      margin-top: getRem(130);
+      font-size: getRem(28);
+    }
+  }
+  &-goods {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  @include breakpoint(mobile_landscape) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  &-delivery {
+    margin-left: getRem(20);
+    h4 {
+      font-size: getRem(16);
+      margin-bottom: getRem(20);
+    }
+    &-input {
+      width: getRem(284);
+      height: getRem(36);
+      margin-bottom: getRem(15);
+    }
+    &-poshta {
+      width: getRem(120);
+      margin-bottom: getRem(20);
+    }
+    &-radio {
+      display: flex;
+      flex-direction: column;
+      label {
+        margin-bottom: getRem(20);
+      }
+    }
+    &-banks {
+      width: 90%;
+      margin-bottom: getRem(20);
+      @include breakpoint(mobile_landscape) {
+       width: getRem(400);
+      }
+    }
+    &-comment {
+      width: getRem(325);
+      height: getRem(155);
+    }
+    p {
+      width: getRem(340);
+    }
+    &-button {
+      cursor: pointer;
+      width: getRem(325);
+      height: getRem(44);
+      background: rgba(7, 137, 67, 0.7);
+      border: 0;
+      color: white;
+      font-size: getRem(20);
+      margin-top: getRem(30);
+      margin-bottom: getRem(45);
+      &:disabled {
+        cursor: auto;
+        background-color: gray;
+      }
+    }
+    @include breakpoint(mobile_landscape) {
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      h4 {
+        font-size: getRem(20);
+      }
+      &-input {
+        font-size: getRem(16);
+        width: getRem(400);
+        height: getRem(40);
+      }
+      &-radio {
+        input {
+          margin-right: getRem(10);
+        }
+        label {
+          font-size: getRem(16);
+        }
+      }
+
+      &-comment {
+        font-size: getRem(16);
+      }
+
+    }
+  }
+}
+
+.poshta-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.empty-cart {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: getRem(200);
+  font-size: getRem(24);
+  width: 50vh;
+  box-shadow: 0px 0px 10px 4px rgba(112,112,112,0.83);
+  -webkit-box-shadow: 0px 0px 10px 4px rgba(112,112,112,0.83);
+  -moz-box-shadow: 0px 0px 10px 4px rgba(112,112,112,0.83);
+  border-radius: getRem(8);
+  &:hover {
+    color: black;
+    background-color: rgba(192, 255, 167, 0.795);
+  }
+}

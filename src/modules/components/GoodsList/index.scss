@@ -1,0 +1,25 @@
+@import "../../../index.scss";
+
+.goods-list {
+  display: flex;
+  flex-direction: column;
+  @include breakpoint(mobile_landscape) {
+    align-items: center;
+  }
+  &-title {
+    font-size: getRem(26);
+    margin: getRem(40) getRem(20) getRem(15);
+    @include breakpoint(mobile_landscape) {
+      font-size: getRem(36);
+      margin: getRem(30) 0 getRem(15);
+    }
+  }
+  &-block {
+    justify-content:left;
+    display: flex;
+    flex-wrap: wrap;
+    @include breakpoint(mobile_landscape) {
+      width: getRem(1200);
+    }
+  }
+}
